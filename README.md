@@ -1,4 +1,4 @@
-# -------------------------------  Network Service ----------------------------------
+# ------------------------  Network Service ------------------------
 
 
 # SMB:(Like FTP)
@@ -19,3 +19,33 @@ Once they have established a connection, clients can then send commands (SMBs) t
 ### What runs SMB?
 
 Microsoft Windows operating systems since Windows 95 have included client and server SMB protocol support. Samba, an open source server that supports the SMB protocol, was released for Unix system
+
+### Enumeration Of SMB :
+
+Typically, there are SMB share drives on a server that can be connected to and used to view or transfer files. SMB can often be a great starting point for an attacker looking to discover sensitive information — you'd be surprised what is sometimes included on these shares.
+
+### Port Scanning
+
+The first step of enumeration is to conduct a port scan, to find out as much information as you can about the services, applications, structure and operating system of the target machine. You can go as in depth as you like on this, however I suggest using nmap with the -A and -p- tags.
+
+          -A : Enables OS Detection, Version Detection, Script Scanning and Traceroute all in one
+
+          -p- : Enables scanning across all ports, not just the top 1000
+
+
+### Enum4Linux
+
+Enum4linux is a tool used to enumerate SMB shares on both Windows and Linux systems. It is basically a wrapper around the tools in the Samba package and makes it easy to quickly extract information from the target pertaining to SMB. It's installed by default on Parrot and Kali, however if you need to install it, you can do so from the official github.
+
+The syntax of Enum4Linux is nice and simple: "enum4linux [options] ip"
+
+            TAG            FUNCTION
+
+            -U             get userlist
+            -M             get machine list
+            -N             get namelist dump (different from -U and-M)
+            -S             get sharelist
+            -P             get password policy information
+            -G             get group and member list
+
+            -A             all of the above (full basic enumeration)
