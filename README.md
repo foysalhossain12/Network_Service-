@@ -67,5 +67,6 @@ We can remotely access the SMB share using the syntax:
             
             
 ### Example :
-             sbmclinet //10.10.10.11/profiles -U username -p portnumber
+             smbclient -L 10.10.10.11
+             sbmclient //10.10.10.11/profiles -U username -p portnumber
              
