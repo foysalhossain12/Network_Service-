@@ -1,9 +1,9 @@
 #  👀  Network Service 
 
 
-# 🔥 SMB (Server Message Block) :(Like FTP)
+# 🔥 SMB (Server Message Block :port numbers 139 and 445) :
   
-### What is SMB?
+### What is SMB?(Like FTP)
 
 SMB - Server Message Block Protocol - is a client-server communication protocol used for sharing access to files, printers, serial ports and other resources on a network.
 
@@ -118,7 +118,7 @@ You can connect to a telnet server with the following syntax:
 
 We're going to need to keep this in mind as we try and exploit this machine.
 
-### 🎆 NFS(Network File System ) :
+### 🎆 NFS(Network File System :TCP port 2049 ) :
 
 NFS, or Network File System, was designed in 1984 by Sun Microsystems. This distributed file system protocol allows a user on a client computer to access files over a network in the same way they would access a local storage file. Because it is an open standard, anyone can implement the protocol. NFS started in-system as an experiment but the second version was publicly released after the initial success.
 ### 😬 How does NFS work?
@@ -150,8 +150,9 @@ Then ,
 
           sudo mount 10.10.71.180:/var/nfs/general /mnt     
 
-Note : /var/nfs/general  is mount share file via nfs 
-       /mnt is locat dirtectory where mount file will be saved
+#### 👀 Note : 
+              /var/nfs/general  is mount share file via nfs 
+              /mnt is locat dirtectory where mount file will be saved
         
 Then ,
       Check mount file on your local device :
@@ -167,12 +168,12 @@ Then ,
 Finally  , 
           Read mount file :
 
-                 sudo cat /mnt/credential.bak
+                    sudo cat /mnt/credential.bak
 
                     paradoxial.test
                     ShibaPretzel79
 
-Here , paradoxial.test is the username of victim and ShibaPretzel79 is the password of victim
+##### 😍Here , paradoxial.test is the username of victim and ShibaPretzel79 is the password of victim
 
-Happy Hacking 
+🙄 Happy Hacking 😍
 
