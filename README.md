@@ -118,7 +118,7 @@ You can connect to a telnet server with the following syntax:
 
 We're going to need to keep this in mind as we try and exploit this machine.
 
-### 🎆 NFS(Network File System :TCP port 2049 ) :
+# 🎆 NFS(Network File System :TCP port 2049 ) :
 
 NFS, or Network File System, was designed in 1984 by Sun Microsystems. This distributed file system protocol allows a user on a client computer to access files over a network in the same way they would access a local storage file. Because it is an open standard, anyone can implement the protocol. NFS started in-system as an experiment but the second version was publicly released after the initial success.
 ### 😬 How does NFS work?
