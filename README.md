@@ -13,6 +13,7 @@ The SMB protocol is known as a response-request protocol, meaning that it transm
 
 ### How does SMB work?
 ![XMnru12](https://user-images.githubusercontent.com/55437834/121770949-41859480-cb8e-11eb-8767-f3b36899ad9d.png)
+
 Once they have established a connection, clients can then send commands (SMBs) to the server that allow them to access shares, open files, read and write files, and generally do all the sort of things that you want to do with a file system. However, in the case of SMB, these things are done over the network.
 
 
